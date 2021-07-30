@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<section class="wrapper">
+			<div class="form-container">
+				<form class="from" id="mainForm">
+					<input
+						type="file"
+						accept="image/png, image/jpg, image/jpeg"
+						name="imageInput"
+						id="imageInput"
+						class="form__input"
+						required
+					/>
+					<input type="url" name="urlInput" placeholder="enter a link" class="form__input" required/>
+					<div class="select-wrapper"><select class="form__select" name="animationDirection" required>
+						<option disabled selected class="form__select-option">Choose animation</option >
+						<option value="slide-to-left" class="form__select-option">Slide from rigth to left</option >
+						<option value="slide-to-right" class="form__select-option">Slide from left to rigth</option> 
+					</select>
+					<span class="select__custom-arrow">&#9660</span>
+				</div>
+					
+					<button type="submit" class="form__button">Submit</button>
+				</form>
+			</div>
+			<div class="image-container" id="imageContainer"></div>
+		</section>
+	</body>
+</html>

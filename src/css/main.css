@@ -1,0 +1,141 @@
+@import 'normalize.css';
+@import 'common.css';
+@import 'animations.css';
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.form-container {
+	width: 100%;
+	max-height: 45vh;
+	box-sizing: border-box;
+}
+
+.from {
+	width: 40%;
+	height: fit-content;
+	padding: 2rem 0;
+	margin: 1rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 2px var(--app-secondary-color);
+	border-radius: 0.5rem;
+}
+
+.form__input,
+.form__select,
+.form__button {
+	width: 90%;
+	margin: 1rem;
+	padding: 0.7rem;
+	background-color: inherit;
+	border: none;
+	outline: none;
+	box-shadow: 0 0 3px var(--app-secondary-color);
+	border-radius: 0.5rem;
+}
+
+.form__input::-webkit-file-upload-button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	border-right: 1px solid var(--app-secondary-color);
+	cursor: pointer;
+	margin-right: 2rem;
+	padding: 0 1rem 0 0;
+}
+
+.select-wrapper {
+	width: 90%;
+	margin: 1rem;
+	height: fit-content;
+	position: relative;
+}
+
+.form__select {
+	width: 100%;
+	margin: 0;
+	cursor: pointer;
+	appearance: none;
+}
+
+.select__custom-arrow {
+	position: absolute;
+	display: block;
+	background: #ffe600;
+	width: 3rem;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	border-radius: 0.5rem;
+	pointer-events: none;
+	text-align: center;
+	font-size: 1.4rem;
+	padding: 0.8rem;
+}
+
+.form__select-option {
+	width: 100%;
+	background: var(--app-main-color);
+	font-size: 1.8rem;
+}
+
+.form__button {
+	width: 40%;
+	cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:focus {
+	background-color: var(--app-secondary-color);
+	color: #fff;
+}
+
+/* image container */
+
+.image-container {
+	box-sizing: border-box;
+	width: 40%;
+	height: 50vh;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inserted-image {
+	max-height: 50vh;
+}
+
+.slide-to-left {
+	display: block;
+	animation: 1.5s slideToLeft;
+}
+
+.slide-to-right {
+	display: block;
+	animation: 1.5s slideToRight;
+}
+
+@media screen and (max-width: 980px) {
+	.from,
+	.image-container {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.from,
+	.image-container {
+		width: 90%;
+	}
+}
